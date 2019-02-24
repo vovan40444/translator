@@ -1,0 +1,189 @@
+.footer {
+	padding: 56px 0 70px;
+	background-color: #38393a;
+	@include breakpoint("maxlarge") {
+		padding: 48px 0 60px;
+	}
+	@include breakpoint("maxmedium") {
+		padding: 35px 0 40px;
+	}
+	.container {
+		padding-left: 15px;
+		padding-right: 15px;
+	}
+	.contacts {
+		padding-top: 15px;
+	}
+	.top-line {
+		align-items: flex-start;
+		padding-top: 0;
+		@include breakpoint("maxsmall") {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			.logo {
+				order: -3;
+			}
+			.contacts {
+				display: block;
+				order: -1;
+			}
+			.main-contacts {
+				text-align: left;
+			}
+			.contacts__phone {
+				font-size: 20px;
+			}
+			.button {
+				width: 190px;
+				text-align: center;
+				margin-top: 5px;
+			}
+			.main-contacts__top {
+				font-size: 20px;
+			}
+			.main-contacts__btm {
+				font-size: 20px;
+			}
+			.logo__top {
+				font-size: 20px;
+			}
+			.logo__bottom {
+				font-size: 17px;
+			}
+		}
+		@include breakpoint("mobileonly") {
+			.contacts__phone {
+				font-size: 16px;
+			}
+			.button {
+				width: 190px;
+				text-align: center;
+				margin-top: 5px;
+			}
+			.main-contacts__top {
+				font-size: 16px;
+			}
+			.main-contacts__btm {
+				font-size: 16px;
+			}
+			.logo__top {
+				font-size: 16px;
+			}
+			.logo__bottom {
+				font-size: 14px;
+			}
+		}
+	}
+}
+
+.main-contacts {
+	padding-top: 15px;
+	&__txt {
+
+	}
+
+	&__top {
+		padding-left: 32px;
+		color: #ffffff;
+		font-family: $font; font-weight: 700;
+		font-size: 18px;
+		@include breakpoint("maxlarge") {
+			font-size: 16px;
+		}
+		@include breakpoint("maxmedium") {
+			font-size: 12px;
+			padding-left: 20px;
+		}
+	}
+
+	&__btm {
+		text-decoration: none;
+		display: inline-block;
+		margin-top: 7px;
+		padding-left: 32px;
+		position: relative;
+		color: #ffffff;
+		font-family: $font; font-weight: 300;
+		font-size: 18px;
+		@include breakpoint("maxlarge") {
+			font-size: 16px;
+		}
+		@include breakpoint("maxmedium") {
+			font-size: 12px;
+			padding-left: 20px;
+		}
+		.icon-email {
+			position: absolute;
+			left: 0;
+			top: 50%;
+			transform: translate(0, -50%);
+		}
+		.icon-mobile {
+			position: absolute;
+			left: 5px;
+			top: 50%;
+			transform: translate(0, -50%);
+			@include breakpoint("maxlarge") {
+				left: 4px;
+			}
+			@include breakpoint("maxsmall") {
+				left: 3px;
+			}
+			@include breakpoint("mobileonly") {
+				left: 2px;
+			}
+		}
+	}
+}
+
+
+
+.social {
+	padding-left: 32px;
+	padding-top: 12px;
+	@include breakpoint("maxmedium") {
+		padding-top: 5px;
+		padding-left: 20px;
+	}
+	li {
+		display: inline-block;
+		&:not(:last-child) {
+			margin-right: 5px;
+		}
+	} 
+	a {
+		display: block;
+		text-decoration: none;
+		width: 52px;
+		height: 52px;
+		@include breakpoint("maxlarge") {
+			width: 46px;
+			height: 46px;
+		}
+		@include breakpoint("maxmedium") {
+			width: 36px;
+			height: 36px;
+		}
+		@include breakpoint("mobileonly") {
+			width: 48px;
+			height: 48px;
+		}
+		&.whatsapp {
+			background: url(../img/watsup.png) center top no-repeat;
+			background-size: 100% 100%;
+		}
+		&.viber {
+			background: url(../img/viber.png) center top no-repeat;
+			background-size: 100% 100%;
+		}
+		&.facebook {
+			background: url(../img/facebook.png) center top no-repeat;
+			background-size: 100% 100%;
+		}
+		&.vk {
+			background: url(../img/vk.png) center top no-repeat;
+			background-size: 100% 100%;
+		}
+	}
+}

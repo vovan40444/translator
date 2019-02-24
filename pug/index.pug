@@ -1,0 +1,254 @@
+extends layout/layout
+append config
+	- var pageTitle = 'main-page'
+
+block main
+	include includes/header.pug
+	// begin section-main
+	section.section-main
+		.container
+			.row
+				.col-lg-8.col-md-8.col-sm-8.col-xs-12.col-xxs-12.mbsdib
+					h1.main-title.main-title_line Работа с переводчиком <br>напрямую без переплат
+					.transl 中俄翻译    技术语言
+					.subtitle Расчёт стоимости перевода бесплатно
+					.text-sm Заполните форму обратной связи или прикрепите документ для перевода
+				.col-lg-4.col-md-4.col-sm-4.col-xs-4.col-xxs-12.mbsn
+					.form-wrap-triangle
+						.bottom-left
+						.bottom-right
+						.left-color
+						.skew-form-bg
+							+b.form
+								+e.title Расчёт стоимости <br>перевода
+								form(action="sendmail.php" method="post")
+									input(type="text" placeholder="Ваше имя" name="name")
+									input(type="email" placeholder="Ваш e-mail" name="email")
+									textarea(placeholder="Текст заявки" name="comment")
+									.center
+										label.file2(for="file3")
+											i.icon-attach_sm
+											span Прикрепить файл
+									input(type="file" id="file3" name="file")
+									button.button.button_theme_1(type="submit" class="send") Рассчитать стоимость
+								+e.note Нажимая на кнопку, вы принимаете <br>Положение и Согласие на обработку <br>персональных данных.
+	// end section-main
+	// begin section-advantages
+	section.section-advantages
+		.bg-pattern.bg-pattern_wt
+			.container
+				.form-wrap-triangle.mbsb
+					.bottom-left
+					.bottom-right
+					.left-color
+					.skew-form-bg
+						+b.form
+							+e.title Расчёт стоимости <br>перевода
+							form(action="sendmail.php" method="post")
+								input(type="text" placeholder="Ваше имя" name="name")
+								input(type="email" placeholder="Ваш e-mail" name="email")
+								textarea(placeholder="Текст заявки" name="comment")
+								.center
+									label.file2(for="file2")
+										i.icon-attach_sm
+										span Прикрепить файл
+								input(type="file" id="file2" name="file")
+								button.button.button_theme_1(type="submit" class="send") Рассчитать стоимость
+							+e.note Нажимая на кнопку, вы принимаете <br>Положение и Согласие на обработку <br>персональных данных.
+				.flex-adv
+					.col-lg-4.col-md-4.col-sm-4.col-xs-12.col-xxs-12
+						+b.box-color_1
+							+e.icon-wrap
+								+e.I.i.icon-doc
+							+e.title Письменный перевод
+							+e.P.p Научно-техническая документация, чертежи, технические паспорта, инструкции по применению. 
+					.col-lg-4.col-md-4.col-sm-4.col-xs-12.col-xxs-12
+						+b.box-color_2
+							+e.icon-wrap
+								+e.I.i.icon-sound
+							+e.title Устный перевод
+							+e.P.p Проведение переговоров, <br>логистика, пусконаладочные <br>работы
+					.col-lg-4.col-md-4.col-sm-4.col-xs-12.col-xxs-12
+						+b.box-color_3
+							+e.icon-wrap
+								+e.I.i.icon-serv
+							+e.title Консультативные услуги
+							+e.P.p Подбор оборудования, <br>логистика, пусконаладочные <br>работы, сертификация
+			.container.container_min
+				.title.title_line Почему вам стоит <strong>сотрудничать со мной?</strong>
+				.row.adv-wrap
+					.col-lg-6.col-md-6.col-sm-6.col-xs-12.col-xxs-12
+						+b.adv-item
+							+e.title Работа без посредников
+							+e.P.p Работая напрямую с переводчиком, <br>Вы не платите деньги посредникам <br>и экономите время на согласование <br>технических и организационных <br>вопросов. 
+					.col-lg-6.col-md-6.col-sm-6.col-xs-12.col-xxs-12
+						+b.adv-item
+							+e.title Опыт более 20 лет
+							+e.P.p Большой опыт работы на <br>производственных площадках России и <br>Китая даёт возможность адаптировать <br>методику работы китайских партнеров <br>под требования российского заказчика.
+					.col-lg-6.col-md-6.col-sm-6.col-xs-12.col-xxs-12
+						+b.adv-item
+							+e.title Экономия вашего времени
+							+e.P.p Наличие лингвистического и технического <br>образований позволяет в 2-3 раза сократить <br>время проведения переговоров и работ с <br>китайскими партнерами.
+					.col-lg-6.col-md-6.col-sm-6.col-xs-12.col-xxs-12
+						+b.adv-item
+							+e.title Узкое направление
+							+e.P.p В отличие от крупных бюро переводов <br>я работаю в узком направлении и <br>заинтересован в долгосрочном <br>сотрудничестве с каждым клиентом.
+	// end section-advantages
+	// begin section-specialists
+	section.section-specialists
+		.container
+			.head1 Ваши специалисты будут общаться <br>с китайскими партнёрами на одном языке!
+			.sub Правильный перевод поможет обойти многие <br>«подводные камни» во время пусконаладочных работ и <br>позволит новому оборудованию приносить вам пользу. 
+			a.button.button_width.button_theme_1.fancybox-modal(href="#price-mod") Заказать перевод
+	// end section-specialists
+	// begin section-profile
+	section.section-profile#ch1
+		.bg-pattern.bg-pattern_bl
+			.container.container_min
+				.row
+					.col-lg-6.col-md-6.col-sm-6.col-xs-12.col-xxs-12
+						.title.title_line Давайте <strong>знакомиться</strong>
+						.name Терехов Николай Олегович
+						.pos.
+							Выпускник Института стран<br>
+							Азии и Африки при МГУ им. М.В. Ломоносова<br>
+							и Московского энергетического института.
+					.col-lg-6.col-md-6.col-sm-6.col-xs-12.col-xxs-12
+						.image-user
+							img(src="../img/person.png", alt="")
+				.row
+					.col-lg-6.col-md-6.col-sm-6.col-xs-12.col-xxs-12.mt-b
+						.head2 Специализация по направлениям:
+						.text-numb 1. Техническое:
+						ul.list
+							li - приборостроение; 
+							li - машиностроение;
+							li - авиационная техника;
+							li - электротехника;
+							li - энергетика;
+							li - оборудование для газо и <br>нефтедобывающих скважин;
+							li - токарно-фрезерное оборудование и <br>автоматы продольного точения с ЧПУ;
+					.col-lg-6.col-md-6.col-sm-6.col-xs-12.col-xxs-12.mt-t.plminl
+						ul.list
+							li - кузнечно-прессовое оборудование;
+							li - автоматизированные сборочные линии;
+							li - пресс-формы.
+						.text-numb 2. Строительство.
+						.text-numb 3. Пусконаладочные работы.
+						.text-numb 4. Гарантийное и пост гарантийное <br>обслуживание.
+						.text-numb 5. Склад, логистика.
+				.row.mt30
+					.col-lg-6.col-md-6.col-sm-6.col-xs-12.col-xxs-12
+						.head2 Базовое образование:
+						ul.sqr
+							li Московский энергетический институт, <br>электромеханический факультет.
+							li МГУ им. М.В. Ломоносова, <br>Институт стран Азии и Африки, <br>межвузовский факультет китайского языка.
+					.col-lg-6.col-md-6.col-sm-6.col-xs-12.col-xxs-12.plminl
+						.head2 Дополнительное образование:
+						ul.sqr
+							li Курсы повышения <br>квалификации при Институте Конфуция <br>Рязанского государственного <br>университета им. С.А. Есенина.
+				.sert-wrap
+					.col-cust
+						a.fancybox(href="../img/sert1.jpg")
+							img(src="../img/sert1.jpg", alt="")
+					.col-cust
+						a.fancybox(href="../img/sert2.jpg")
+							img(src="../img/sert2.jpg", alt="")
+					.col-cust
+						a.fancybox(href="../img/sert3.jpg")
+							img(src="../img/sert3.jpg", alt="")
+	// end section-profile
+	// begin section-form-1
+	section.section-form-1
+		.container
+			.title-white Заказать перевод
+			.subtitle-sm Заполните форму обратной связи или прикрепите документ для перевода
+			form.form-h(action="sendmail.php" method="post")
+				input(type="text" placeholder="Ваше имя" name="name")
+				input(type="email" placeholder="Ваш e-mail" name="email")
+				input(type="text" placeholder="Комментарии" name="comment")
+				label.file(for="file1")
+					i.icon-attach
+					span Файл
+				input(type="file" id="file1" name="file")
+				.center
+					button.button.button_width.button_theme_2(type="submit" class="send") Заказать перевод
+	// end section-form-1
+	.bg-pattern.bg-pattern_wt
+		div.section-client
+			.container.container_min
+				.title.title_line Мои <strong>клиенты</strong>
+			.container
+				+b.client-wrap
+					+e.item
+						img(src="../img/p1.png", alt="")
+					+e.item
+						img(src="../img/p2.png", alt="")
+					+e.item
+						img(src="../img/p3.png", alt="")
+					+e.item
+						img(src="../img/p4.png", alt="")
+					+e.item
+						img(src="../img/p5.png", alt="")
+					+e.item
+						img(src="../img/p6.png", alt="")
+					.w100
+					+e.item
+						img(src="../img/p7.png", alt="")
+					+e.item
+						img(src="../img/p8.png", alt="")
+					+e.item
+						img(src="../img/p9.png", alt="")
+					+e.item
+						img(src="../img/p10.png", alt="")
+					+e.item
+						img(src="../img/p11.png", alt="")
+		// begin section-comment
+		div.section-comment#ch2
+			.container.container_min
+				.title.title_line Отзывы <strong>клиентов</strong>
+			.container.cst
+				.main-slider
+					.main-slider-item
+						+b.slide
+							+e.img
+								img(src="../img/comment1.jpg", alt="")
+							+e.texts
+								+e.title ТехноНИКОЛЬ
+								+e.P.p.
+									“Николай проявил себя с лучшей стороны.” Профессионал в своем <br>деле. Помог провести переговоры на высоком уровне. Очень хотелось отметить его ответственный подход к работе, учел все <br>наши пожелания и справился на высшем уровне с работой.
+								+e.name Лилиана Смирнова
+					.main-slider-item
+						+b.slide
+							+e.img
+								img(src="../img/comment1.jpg", alt="")
+							+e.texts
+								+e.title ТехноНИКОЛЬ
+								+e.P.p.
+									“Николай проявил себя с лучшей стороны.” Профессионал в своем <br>деле. Помог провести переговоры на высоком уровне. Очень хотелось отметить его ответственный подход к работе, учел все <br>наши пожелания и справился на высшем уровне с работой.
+								+e.name Лилиана Смирнова
+				.center
+					button.button.button_width.button_theme_2(type="submit" class="send") Оставить отзыв
+		// end section-comment
+		// begin section-form-2
+	section.section-form-2
+		.container
+			.title-white Ваше оборудование должно <br>работать на Вас!
+			.subtitle-md Обратитесь ко мне и мы решим ваши вопросы!
+			form.form-h(action="sendmail.php" method="post")
+				input(type="text" placeholder="Ваше имя" name="name")
+				input(type="email" placeholder="Ваш e-mail" name="email")
+				input(type="text" placeholder="Комментарии" name="comment")
+				button.button.button_width.button_theme_2(type="submit" class="send") Заказать перевод
+	// end section-form-2
+	// begin section-map
+	section.section-map#ch3
+		#map-canvas
+	// end section-map
+	include includes/footer.pug
+	include includes/modals.pug
+	//- include includes/form.pug
+	//- include includes/button-menu.pug
+
+	
+	

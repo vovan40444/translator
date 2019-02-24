@@ -1,0 +1,126 @@
+/* _____ Basic elements _____ */
+
+::-webkit-input-placeholder {color: #484848;font-family: $font; font-weight: 300;font-size: 17px;}
+::-moz-placeholder {color: #484848;font-family: $font; font-weight: 300;font-size: 17px;}
+:-moz-placeholder {color: #484848;font-family: $font; font-weight: 300;font-size: 17px;}
+:-ms-input-placeholder {color: #484848;font-family: $font; font-weight: 300;font-size: 17px;}
+
+// @include breakpoint("phablet") {
+// 	::-webkit-input-placeholder {font-size: 20px;}
+// 	::-moz-placeholder {font-size: 20px;}
+// 	:-moz-placeholder {font-size: 20px;}
+// 	:-ms-input-placeholder {font-size: 20px;}
+// }
+// @include breakpoint("small") {
+// 	::-webkit-input-placeholder {font-size: 20px;}
+// 	::-moz-placeholder {font-size: 20px;}
+// 	:-moz-placeholder {font-size: 20px;}
+// 	:-ms-input-placeholder {font-size: 20px;}
+// }
+
+
+
+
+*, *:before, *:after {
+	box-sizing: border-box;
+}
+
+/*--------------------------------------------------------------
+# Alignments
+--------------------------------------------------------------*/
+.alignleft {
+	display: inline;
+	float: left;
+	margin-right: 1.5em;
+}
+
+.alignright {
+	display: inline;
+	float: right;
+	margin-left: 1.5em;
+}
+
+.aligncenter {
+	clear: both;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+.center{text-align: center !important;}
+.text-l{text-align: left !important;}
+.text-r{text-align: right !important;}
+.clearfix:before, .clearfix:after {content: "";display: table;}
+.clearfix:after {clear: both;}
+.flow-hidden {overflow: hidden}
+.none {
+	display: none;
+}
+
+/* base */
+
+
+body {
+	background-color: #fff;
+	position: relative; 
+	color: #000;
+	font-family: $font;
+	font-weight: 400;
+	-webkit-font-smoothing: antialiased;
+
+	line-height: 1.2;
+}
+
+/* layout */
+
+
+
+
+ul {
+	margin: 0;
+	padding: 0;
+	li {
+		list-style-type: none;
+	}
+}
+
+h1,h2,h3,h4,h5,h6 {
+	line-height: 1,2;
+	font-weight: normal;
+	padding: 0;
+	margin: 0;
+}
+
+
+
+
+
+.mbsn {
+	@include breakpoint("maxsmall") {
+		display: none;
+	}
+}
+.mbsdib {
+	@include breakpoint("maxsmall") {
+		display: inline-block;
+		text-align: left;
+		float: none;
+		width: auto;
+		max-width: 99%;
+	}
+}
+
+
+.mbsb {
+	display: none;
+	@include breakpoint("maxsmall") {
+		display: block;
+	}
+}
+.container {
+	@include breakpoint("maxsmall") {
+		width: 460px;
+	}
+	@include breakpoint("mobileonly") {
+		width: 320px;
+	}
+}

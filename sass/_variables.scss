@@ -1,0 +1,33 @@
+ // BOOTSTRAP
+ // $lg-bp-x2: 1430px;
+ // lg-container-x2
+ // $lg-container-x2: 1430px;
+
+
+ $lg-bp: 1180px; 
+ // MIN-WIDTH
+ $lg-container: 1150px; 
+ // lg-CONTAINER
+
+ $md-bp: 992px; 
+ // MIN-WIDTH
+ $md-container: 970px;
+  // md-CONTAINER
+
+  $sm-bp: 768px; 
+ // MIN-WIDTH
+ $sm-container: 750px; 
+ // SM-CONTAINER
+
+
+
+ $bp-blarge:      "only screen and (max-width : $lg-bp-x2 - 1)";
+ $bp-xsmall: 480px;
+
+  // BOOTSTRAP END
+
+
+  $maxlg: 1920px;
+  $bpmlg:      "only screen and (max-width : $maxlg )";
+
+  $font: 'MuseoCyrillic';

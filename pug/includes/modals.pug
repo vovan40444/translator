@@ -1,0 +1,38 @@
+#price-mod.popup.modal
+	.popup__title
+		span Заявка на расчет стоимости
+		.popup__close
+	.popup__subtitle Заполните форму обратной связи или прикрепите документ для перевода.
+	.form
+		form(action="sendmail.php" method="post")
+			input(type="text" placeholder="Ваше имя" name="name")
+			input(type="email" placeholder="Ваш e-mail" name="email")
+			.center
+				label.file2(for="file4")
+					i.icon-att
+					span Прикрепить файл
+			input(type="file" id="file4" name="file")
+			button.button.button_theme_1(type="submit" class="send") Рассчитать стоимость
+		.form__note Нажимая на кнопку, вы принимаете <br>Положение и Согласие на обработку <br>персональных данных.
+
+#call.popup.modal
+	.popup__title
+		span Заявка на обратный звонок
+		.popup__close
+	.popup__subtitle Оставьте свои контактные данные и я свяжусь с Вами в ближайшее время.
+	.form
+		form(action="sendmail.php" method="post")
+			input(type="text" placeholder="Ваше имя" name="name")
+			input(type="tel" placeholder="Ваш телефон" name="phone" data-req="1")
+			button.button.button_theme_1(type="submit" class="send") Заказать звонок
+		.form__note Нажимая на кнопку, вы принимаете <br>Положение и Согласие на обработку <br>персональных данных.
+
+
+
+
+#thx.popup.modal
+	.popup__title
+		span Ваша заявка принята
+		.popup__close
+	.popup__subtitle В ближайшее время я свяжусь с Вами <br>для обсуждения деталей. Спасибо!
+

@@ -1,0 +1,42 @@
+.modal {
+	padding: 20px 15px;
+	margin-left: auto;
+	margin-right: auto;
+	width: 95%;
+	max-width: 350px;
+	background-color: #f8f8f8;
+	color: #333;
+	display: none;
+	@include breakpoint("phablet") {
+		min-width: 60%;
+		max-width: 800px;
+		padding: 25px 20px;
+	}
+	@include breakpoint("small") {
+		padding: 30px;
+	}
+	@include breakpoint("medium") {
+		padding: 40px;
+	}
+	h2 {
+		text-align: center;
+		font-size: 18px;
+		line-height: 1.2;
+		color: #333;
+		@include breakpoint("phablet") {
+			font-size: 20px;
+		}
+	}
+	h3 {
+		font-size: 16px;
+		@include breakpoint("phablet") {
+			font-size: 18px;
+		}
+	}
+	p {
+		font-size: 14px;
+		@include breakpoint("phablet") {
+			font-size: 16px;
+		}
+	}
+}

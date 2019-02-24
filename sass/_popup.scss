@@ -1,0 +1,106 @@
+.modal {
+	display: none;
+	width: 100%;
+	@include breakpoint("small") {
+		min-width: 700px;
+	}
+	@include breakpoint("medium") {
+		min-width: 850px;
+	}
+}
+
+.popup {
+	text-align: center;
+	padding: 20px;
+	@include breakpoint("maxsmall") {
+		padding: 20px 10px;
+	}
+	.form__note {
+		color: rgba(#c2c1c1, .69);
+	}
+	.file2 {
+		margin-top: 15px;
+		@include breakpoint("maxmedium") {
+			margin-top: 10px;
+			margin-bottom: 15px;
+		}
+		span {
+			color: #fff;
+		}
+	}
+	form {
+		input,
+		button {
+			max-width: 268px;
+			margin-left: auto;margin-right: auto;
+		}
+	}
+	.button {
+		font-size: 17px;
+		@include breakpoint("maxmedium") {
+			font-size: 13px;
+		}
+	}
+	&__close {
+		position: absolute;
+		// top: 0;
+		bottom: 90%;
+
+		left: 100%;
+		margin-left: 24px;
+		width: 17px;
+		height: 17px;
+		background: url(../img/close.png);
+		background-size: 100% 100%;
+		cursor: pointer;
+		z-index: 8040;
+		@include breakpoint("maxsmall") {
+			margin-left: 0;
+			// margin-left: 0;
+			// right: 0;
+			// left: auto;
+			// bottom: 100%;
+			// top: auto;
+		}
+		@include breakpoint("mobileonly") {
+			left: auto;
+			right: 0;
+			bottom: 100%;
+		}
+	}
+	&__title {
+		display: inline-block;
+		position: relative;
+		color: #ffffff;
+		font-family: $font; font-weight: 900;
+		font-size: 35px;
+		@include breakpoint("maxmedium") {
+			font-size: 27px;
+		}
+		@include breakpoint("maxsmall") {
+			font-size: 24px;
+		}
+		@include breakpoint("mobileonly") {
+			font-size: 21px;
+		}
+	}
+	&__subtitle {
+		color: #ffffff;
+		font-family: $font; font-weight: 500;
+		font-size: 22px;
+
+		margin: 22px 0 30px;
+		@include breakpoint("maxmedium") {
+			font-size: 17px;
+			white-space: nowrap;
+		}
+		@include breakpoint("maxsmall") {
+			font-size: 15px;
+			white-space: normal;
+			margin: 15px 0 20px;
+		}
+		@include breakpoint("mobileonly") {
+			font-size: 13px;
+		}
+	}
+}

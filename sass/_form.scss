@@ -1,0 +1,333 @@
+input:not([type=submit]) {
+	width: 100%;
+	outline: none;
+	border: none;
+	display: block;
+	background-color: #fff;
+	color: #000;
+	font-family: $font; font-weight: 300;
+	font-size: 17px;
+	padding: 12px 10px 8px 20px;
+	transition: box-shadow .15s ease;
+	@include breakpoint("maxlarge") {
+		padding: 11px 10px 7px 20px;
+	}
+	@include breakpoint("maxmedium") {
+		padding: 7px 10px 3px 20px;
+	}
+	@include breakpoint("maxsmall") {
+		padding: 12px 10px 8px 20px;
+	}
+	@include breakpoint("mobileonly") {
+		padding: 7px 10px 3px 20px;
+	}
+}
+
+.error {
+	box-shadow: inset 0 0 0 1px red !important;
+}
+
+textarea {
+	width: 100%;
+	outline: none;
+	border: none;
+	display: block;
+	background-color: #fff;
+	color: #000;
+	font-family: $font; font-weight: 300;
+	font-size: 17px;
+	height: 95px;
+	resize: none;
+	padding: 12px 10px 8px 20px;
+	margin-bottom: 14px;
+	@include breakpoint("maxlarge") {
+		height: 85px;
+		margin-bottom: 10px;
+	}
+	@include breakpoint("maxmedium") {
+		height: 68px;
+	}
+	@include breakpoint("mobileonly") {
+		height: 65px;
+	}
+}
+
+.form {
+	input {
+		margin-bottom: 10px;
+		@include breakpoint("maxlarge") {
+			margin-bottom: 7px;
+		}
+		@include breakpoint("maxmedium") {
+			
+		}
+	}
+}
+
+[type=file] {
+	display: none !important;
+}
+[type=submit] {
+	display: block;
+	width: 100%;
+}
+
+
+button:disabled {
+	background-color: #ddd !important;
+	box-shadow: none !important;
+}
+
+.form-h {
+	display: flex;
+	align-items: center;
+	flex-wrap: wrap;
+	justify-content: center;
+	@include breakpoint("maxsmall") {
+		display: block;
+		text-align: center;
+	}
+	input {
+		width: 234px;
+		margin-right: 20px;
+		@include breakpoint("maxmedium") {
+			max-width: 183px;
+			margin-right: 12px;
+		}
+		@include breakpoint("maxsmall") {
+			max-width: 266px;
+			width: 266px;
+			margin-left: auto;
+			margin-right: auto;
+			margin-bottom: 9px;
+		}
+	}
+	.center {
+		width: 100%;
+	}
+}
+.icon-attach {
+}
+
+.form-wrap-triangle {
+	background-color: #e0c557;
+	position: relative;
+}
+
+.bottom-left {
+	position: absolute;
+	width: 50%;	
+	height: 30px;
+	left: 0;
+	bottom: 0;
+	&:after {
+		content: '';
+		display: block;
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		top: 0;
+		left: 0;
+		background-color: #e0c557;
+		transform: skew(0deg, 10deg);
+		transform-origin: left bottom;
+	}
+}
+.bottom-right {
+	position: absolute;
+	height: 30px;
+	width: 50%;
+	right: 0;
+	bottom: 0;
+	&:after {
+		content: '';
+		display: block;
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		top: 0;
+		left: 0;
+		background-color: #e0c557;
+		transform: skew(0deg, -10deg);
+		transform-origin: right bottom;
+	}
+}
+
+.left-color {
+	position: absolute;
+	width: 100%;
+	top: 0;
+	left: 0;
+	bottom: -30px;
+	z-index: 1;
+	overflow: hidden;
+	&:after {
+		content: '';
+		display: block;
+		position: absolute;
+		width: 73%;
+		right: 0;
+		top: 0;
+		left: -0px;
+		bottom: 30px;
+		background-color: #e5b114;
+		transform: skew(-27deg, 0deg);
+
+		transform-origin: left top;
+
+	}
+	&:before {
+		content: '';
+		display: block;
+		position: absolute;
+		width: 19%;
+		top: -200px;
+		left: 0;
+		bottom: 30px;
+		background-color: #e5b114;
+		transform: skew(-27deg, 10deg);
+		transform-origin: left bottom;
+	}
+}
+
+.skew-form-bg {
+	position: relative;
+	background-color: #e0c557;
+	padding: 29px 39px 0px 33px;
+	@include breakpoint("maxlarge") {
+		padding: 29px 30px 0px 30px;
+	}
+	@include breakpoint("maxmedium") {
+		padding: 25px 17px 0px 17px;
+	}
+	&>* {
+		position: relative;
+		z-index: 2;
+	}
+}
+
+.form {
+
+	&__title {
+		color: #464545;
+		font-family: $font; font-weight: 700;
+		font-size: 28px;
+		line-height: 26px;
+		margin-bottom: 21px;
+		@include breakpoint("maxlarge") {
+			font-size: 25px;
+			line-height: 1;
+			margin-bottom: 15px;
+		}
+		@include breakpoint("maxmedium") {
+			font-size: 20px;
+			margin-bottom: 8px;
+		}
+	}
+
+	&__note {
+		margin-top: 18px;
+		text-align: center;
+		color: rgba(#292828, .84);
+		// font-family: Acrom;
+		font-size: 11px;
+		font-weight: 300;
+		line-height: 12px;
+		@include breakpoint("maxlarge") {
+			font-size: 10px; 
+			margin-top: 10px;    
+		}
+		@include breakpoint("maxmedium") {
+			font-size: 8px;
+			line-height: 1;
+		}
+		@include breakpoint("maxsmall") {
+			font-size: 9px;
+		}
+	}
+}
+.send {
+}
+
+.file2 {
+	cursor: pointer;
+	display: inline-block;
+	text-align: center;
+	margin-bottom: 22px;
+	@include breakpoint("maxlarge") {
+		margin-bottom: 19px;
+	}
+	@include breakpoint("maxmedium") {
+		margin-bottom: 8px;
+	}
+	@include breakpoint("maxsmall") {
+
+	}
+	i, span {
+		display: inline-block;
+		vertical-align: middle;
+	}
+	span {
+		margin-left: 7px;
+		position: relative;
+		top: 1px;
+		color: #292828;
+		font-family: $font; font-weight: 500;
+		font-size: 15px;
+		@include breakpoint("maxlarge") {
+			font-size: 13px;   
+		}
+		@include breakpoint("maxmedium") {
+			font-size: 10px;
+		}
+		@include breakpoint("maxsmall") {
+			font-size: 13px;
+		}
+	}
+}
+
+.file {
+	cursor: pointer;
+	outline: none;
+	border: none;
+	display: block;
+	background-color: #fff;
+
+	padding: 9px 20px 0 10px;
+	cursor: pointer;
+	color: #484848;
+	font-family: $font; 
+	font-weight: 300;
+	font-size: 17px;
+
+	height: 40px;
+	vertical-align: middle;
+	@include breakpoint("maxlarge") {
+		height: 38px;
+	}
+	@include breakpoint("maxmedium") {
+		height: 30px;
+		// font-size: 13px;
+		padding: 7px 15px 0 10px;
+	}
+	@include breakpoint("maxsmall") {
+		height: 40px;
+		width: 266px;
+		margin-left: auto;
+		margin-right: auto;
+		padding: 12px 20px 0 10px;
+		text-align: left;
+		font-size: 17px;
+	}
+	@include breakpoint("mobileonly") {
+		height: 30px;
+		padding-top: 6px;
+	}
+	span {
+		margin-left: 7px;
+	}
+	i,span {
+		display: inline-block;
+		vertical-align: middle;
+	}
+}

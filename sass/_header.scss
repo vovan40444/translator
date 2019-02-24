@@ -1,0 +1,189 @@
+@import "_hamburgers.scss";
+
+.header {
+	.container {
+		@include breakpoint("large") {
+			padding-left: 15px;
+			padding-right: 15px;
+		}
+	}
+}
+.top-line {
+	display: flex;
+	align-items: flex-end;
+	flex-wrap: wrap;
+	justify-content: space-between;
+
+	padding: 26px 0 25px;
+	@include breakpoint("maxlarge") {
+		padding: 26px 0 35px;
+	}
+	@include breakpoint("maxmedium") {
+		padding: 26px 0 28px;
+	}
+	@include breakpoint("maxsmall") {
+		padding-bottom: 15px;
+		display: block;
+		text-align: center;
+	}
+	@include breakpoint("mobileonly") {
+		padding-bottom: 10px;
+	}
+}
+.logo {
+	display: flex;
+	align-items: center;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	@include breakpoint("maxsmall") {
+		display: inline-flex;
+		justify-content: flex-start;
+		text-align: left;
+	}
+
+	&__img {
+		flex-shrink: 0;
+		img {
+			display: block;
+			@include breakpoint("maxlarge") {
+				width: 88px;
+			}
+			@include breakpoint("maxmedium") {
+				width: 69px;
+			}
+			@include breakpoint("maxsmall") {
+				width: 76px;
+			}
+			@include breakpoint("mobileonly") {
+				width: 70px;
+			}
+		}
+	}
+
+	&__text {
+		padding-left: 28px;
+		padding-top: 9px;
+		@include breakpoint("maxsmall") {
+			padding-left: 22px;
+		}
+	}
+
+	&__top {
+		color: #31addb;
+		font-family: $font; 
+		font-weight: 900;
+		font-size: 22px;
+		line-height: 25.52px;
+		@include breakpoint("maxlarge") {
+			font-size: 20px;
+			line-height: 22.91px;
+		}
+		@include breakpoint("maxmedium") {
+			font-size: 16px;
+			line-height: 17.82px;
+		}
+	}
+
+	&__bottom {
+		color: #979696;
+		font-family: $font; 
+		font-weight: 500;
+		font-size: 19px;
+		line-height: 27.49px;
+		@include breakpoint("maxlarge") {
+			font-size: 17px;
+			line-height: 24.67px;
+		}
+		@include breakpoint("maxmedium") {
+			font-size: 13px;
+			line-height: 19.19px;
+		}
+		&_color_1 {
+			color: #fff;
+		}
+	}
+}
+.main-nav {
+	padding-bottom: 15px;
+	@include breakpoint("maxsmall") {
+		margin-top: 10px;
+	}
+	&__item {
+		text-decoration: none;
+		display: inline-block;
+		color: #464545;
+		font-family: $font; font-weight: 700;
+		font-size: 17px;
+		@include breakpoint("maxlarge") {
+			font-size: 16px;  
+		}
+		@include breakpoint("maxmedium") {
+			font-size: 12px; 
+		}
+		@include breakpoint("maxsmall") {
+			font-size: 15px;
+		}
+		&:not(:last-child) {
+			margin-right: 33px;
+			@include breakpoint("maxlarge") {
+				margin-right: 23px;
+			}
+			@include breakpoint("maxmedium") {
+				
+			}
+		}
+		&:hover {
+			color: #31addb;
+		}
+	}
+}
+.contacts {
+	padding-bottom: 10px;
+	text-align: right;
+	@include breakpoint("maxsmall") {
+		display: none;
+	}
+	.button {
+		margin-top: 8px;
+		@include breakpoint("maxlarge") {
+			margin-top: 6px;
+		}
+		@include breakpoint("maxmedium") {
+			margin-top: 3px;
+		}
+	}
+
+	&__phone {
+		display: inline-block;
+		text-decoration: none;
+		padding-left: 29px;
+
+		color: #2d2c2c;
+		font-family: $font; font-weight: 300;
+		font-size: 19px;
+		position: relative;
+		@include breakpoint("maxlarge") {
+			font-size: 17px;    
+			padding-left: 24px;
+		}
+		@include breakpoint("maxmedium") {
+			font-size: 13px;
+			padding-left: 18px;
+		}
+		&_color_1 {
+			color: #fff;
+		}
+		i {
+			position: absolute;
+			left: 0;
+			top: 44%;
+			transform: translate(0, -50%);
+		}
+		span {
+			font-family: $font; font-weight: 700;
+		}
+	}
+}
+
+
+

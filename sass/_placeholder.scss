@@ -1,0 +1,79 @@
+ @mixin breakpoint($point) {
+ 	@if $point == large {
+ 		@media (min-width: $lg-bp) { @content ; }
+ 	}
+ 	@else if $point == medium {
+ 		@media (min-width: $md-bp) { @content ; }
+ 	}
+ 	@else if $point == small {
+ 		@media (min-width: $sm-bp) { @content ; }
+ 	}
+ 	@else if $point == phablet {
+ 		@media (min-width: $bp-xsmall)  { @content ; }
+ 	}
+ 	@else if $point == maxlarge {
+ 		@media (max-width: $lg-bp - 1) { @content ; }
+ 	}
+ 	@else if $point == maxmedium {
+ 		@media (max-width: $md-bp - 1) { @content ; }
+ 	}
+ 	@else if $point == maxsmall {
+ 		@media (max-width: $sm-bp - 1) { @content ; }
+ 	}
+ 	@else if $point == mobileonly {
+ 		@media (max-width: $bp-xsmall - 1)  { @content ; }
+ 	}
+ }
+
+ %justify-c {
+ 	font-size: 1px;
+ 	text-align: justify;
+ 	&:after {
+ 		content: '';
+ 		display: inline-block;
+ 		width: 100%;
+ 		height: 0;
+ 		overflow: hidden;
+ 	}
+ 	&>* {
+ 		display: inline-block;
+ 	}
+ }
+
+
+ %clearfix {
+ 	*zoom: 1;
+ 	&:before, &:after {
+ 		content: " ";
+ 		display: table;
+ 	}
+ 	&:after {
+ 		clear: both;
+ 	}
+ }
+
+ %circle {
+ 	border-radius: 50%;
+ }
+
+ %input {
+ 	display: inline-block;
+ 	width: 100%;
+ 	height: 30px;
+ 	border: none; 
+ 	outline: none;
+ 	text-align: center;
+ 	color: #000;
+ 	font-size: 14px;
+ }
+
+ %submit {
+ 	display: inline-block;
+ 	border: none;
+ 	outline: none;
+ 	width: 100%;
+ 	height: 35px;
+ 	text-align: center;
+ 	font-size: 14px;
+ 	color: #000;
+ }
